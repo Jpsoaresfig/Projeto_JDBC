@@ -45,7 +45,7 @@ public class SellerDaoJDBC implements SellerDao {
 		
 		try {
 			st = conn.prepareStatement(
-					"SELECT seller.*, department.Name as DepName " +
+					"SELECT seller.*, department.Name as DepName " +//lembrar do espaço antes das " "
 					"FROM seller INNER JOIN department " +
 					"ON seller.DepartmentId = department.Id " +
 					"WHERE seller.Id = ?");
