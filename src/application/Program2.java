@@ -8,10 +8,17 @@ public class Program2 {
 	public static void main(String[] args) {
 		DepartmentDao DepartmentDao = DaoFactory.crDepartmentDao();
 		
-		System.out.println("=== TESTE 1: Department insert ===");
-		Department department = new Department(7,"Music");
-		DepartmentDao.insert(department);
-		System.out.println("Inserted! New Id = "+ department.getId());
+		//System.out.println("=== TESTE 1: Department insert ===");
+		//Department department = new Department(7,"Music");
+		//DepartmentDao.insert(department);
+		//System.out.println("Inserted! New Id = "+ department.getId());
+		
+		System.out.println("\n=== TESTE 2: Department insert ===");
+		Department dep2 = DepartmentDao.findById(1);
+		dep2.setName("Computerss");
+		DepartmentDao.update(dep2);
+		System.out.println("Update completed");
+		
 
 	}
 
